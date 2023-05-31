@@ -1,0 +1,13 @@
+// Fichier main.scss
+@import 'base/reset';
+@import 'base/fonts';
+@import 'components/loader';
+@import 'components/banner';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/footer';
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/placeholders';
+@import 'utils/variables';
