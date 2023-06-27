@@ -56,6 +56,52 @@
         font-weight: 500;
         font-size: 16px;
         color: #FFFFFF;
-
+        cursor : pointer;
+        box-shadow: 0px 4px 10px 0px #000000;
     }
 }
+
+.fonctionnement {
+    height: 440px;
+    &__titre {
+        font-weight: 700;
+        font-size: 24px;
+        margin: 30px 0px 20px 20px;
+    }
+    &__etape {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        Width: 322.49px;
+        Height: 72.38px;
+        background-color: var(--grey-bg-button-color);
+        margin: 0px 0px 20px 20px;
+        border-radius: 20px;
+
+        &__numero {
+            margin-left: -12px;
+            background-color: #9356DC;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 24px;
+        }
+        &__icone {
+            margin-left: 15px;
+            color: rgba(126, 126, 126, 1);
+            &--color {
+                margin-left: 15px;
+                color: #9356DC;
+            }
+        }
+        &__texte{
+            margin-left: 15px;
+            font-weight: 500;
+            font-size: 16px;
+
+        }
+    }
+    }
+
