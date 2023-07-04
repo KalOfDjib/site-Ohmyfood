@@ -69,7 +69,7 @@ table {
   margin-bottom: 5px;
 }
 .entete .entete__espace-image img {
-  width: 43%;
+  width: 197px;
   margin: 14px 0px 7px 0px;
 }
 .entete .entete__espace-localisation {
@@ -83,6 +83,47 @@ table {
 .entete .entete__espace-localisation .entete__espace-localisation-description {
   padding-left: 15px;
   font-size: 16px;
+}
+
+.entete-carte-restaurant {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 14px;
+  margin-bottom: 5px;
+}
+.entete-carte-restaurant__couleur-fleche {
+  color: rgb(53, 53, 53);
+  padding-left: 15px;
+}
+.entete-carte-restaurant img {
+  width: 197px;
+  padding-left: 50px;
+}
+
+footer {
+  background-color: rgb(53, 53, 53);
+  color: #FFFFFF;
+  height: 186px;
+  width: 100%;
+}
+footer .titre {
+  font-family: Shrikhand;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 25px;
+}
+footer .fa-utensils {
+  padding: 5px 10px 5px 25px;
+}
+footer .fa-handshake-angle {
+  padding: 5px 10px 5px 25px;
+}
+footer .standard {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5px 10px 5px 25px;
 }
 
 :root {
@@ -241,27 +282,31 @@ body {
   width: 15%;
 }
 
-footer {
-  background-color: rgb(53, 53, 53);
-  color: #FFFFFF;
-  height: 186px;
-  width: 100%;
+.restau-palette-gout img {
+  position: relative;
+  z-index: 1;
+  width: 375px;
+  height: 275px;
 }
-footer .titre {
+
+.menu {
+  width: 100%;
+  background-color: rgb(246, 246, 246);
+  height: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -30px;
+  position: relative;
+  z-index: 2;
+}
+.menu__titre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   font-family: Shrikhand;
   font-style: italic;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 25px;
-}
-footer .fa-utensils {
-  padding: 5px 10px 5px 25px;
-}
-footer .fa-handshake-angle {
-  padding: 5px 10px 5px 25px;
-}
-footer .standard {
-  font-size: 16px;
+  font-size: 28px;
   font-weight: 400;
-  padding: 5px 10px 5px 25px;
+  padding: 25px;
 }/*# sourceMappingURL=main.css.map */
