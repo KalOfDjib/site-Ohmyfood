@@ -91,7 +91,10 @@ table {
   --grey-bg-color: #EAEAEA;
   --main-dot-color: #000000;
   --grey-bg-button-color: #F6F6F6;
-  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: roboto, sans-serif;
 }
 
 .main-container {
@@ -131,25 +134,30 @@ table {
   font-size: 16px;
   color: #FFFFFF;
   cursor: pointer;
-  box-shadow: 0px 4px 10px 0px #000000;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 .fonctionnement {
   height: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .fonctionnement__titre {
   font-weight: 700;
   font-size: 24px;
-  margin: 50px 0px 40px 30px;
+  margin: 50px 0px 40px 25px;
+  align-self: flex-start;
 }
 .fonctionnement__etape {
   display: flex;
   flex-direction: row;
   align-items: center;
-  Width: 322.49px;
-  Height: 72.38px;
+  max-width: 322px;
+  width: 100%;
+  height: 72px;
   background-color: var(--grey-bg-button-color);
-  margin: 0px 0px 35px 30px;
+  margin: 0px 0px 35px 0px;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -179,11 +187,81 @@ table {
 
 .restaurant {
   width: 100%;
-  height: 1100px;
+  height: 1250px;
   background-color: var(--grey-bg-button-color);
 }
 .restaurant__titre {
   font-weight: 700;
   font-size: 24px;
   padding: 50px 0px 20px 20px;
+}
+.restaurant__carte {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 251px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.restaurant__carte__photo {
+  max-width: 300px;
+  height: 200px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.restaurant__carte__photo img {
+  max-width: 300px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.restaurant__carte__descriptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.restaurant__carte__descriptions .restaurant__carte__descriptions_partie-gauche {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+}
+.restaurant__carte__descriptions .restaurant__carte__descriptions_partie-gauche .restaurant__carte__descriptions_partie-gauche_nom {
+  padding: 7px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.restaurant__carte__descriptions .restaurant__carte__descriptions_partie-gauche .restaurant__carte__descriptions_partie-gauche_lieu {
+  padding: 7px;
+}
+.restaurant__carte__descriptions .restaurant__carte__descriptions_partie-droite {
+  width: 15%;
+}
+
+footer {
+  background-color: rgb(53, 53, 53);
+  color: #FFFFFF;
+  height: 186px;
+  width: 100%;
+}
+footer .titre {
+  font-family: Shrikhand;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 25px;
+}
+footer .fa-utensils {
+  padding: 5px 10px 5px 25px;
+}
+footer .fa-handshake-angle {
+  padding: 5px 10px 5px 25px;
+}
+footer .standard {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5px 10px 5px 25px;
 }/*# sourceMappingURL=main.css.map */
