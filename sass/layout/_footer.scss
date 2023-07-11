@@ -3,25 +3,28 @@ footer {
     color: #FFFFFF;
     height: 186px;
     width: 100%;
-    .titre {
-        font-family: Shrikhand;
-        font-style: italic;
-        font-size: 18px;
-        font-weight: 700;
-        padding: 25px;
+    .logo-footer {
+        width: 170px;
+        padding: 20px 0px 5px 25px;
+        object-fit: cover;
     }
 
-    .fa-utensils {
+
+    .footer_liens {
+        display: flex;
+        flex-direction: column;
+        .fa-utensils {
+            padding: 5px 10px 5px 25px;
+        }
+
+        .fa-handshake-angle {
         padding: 5px 10px 5px 25px;
-    }
+        }
 
-    .fa-handshake-angle {
-        padding: 5px 10px 5px 25px;
-    }
-
-    .standard {
+        .standard {
         font-size: 16px;
         font-weight: 400;
         padding: 5px 10px 5px 25px;
+        }
     }
 }
