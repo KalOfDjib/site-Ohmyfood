@@ -101,11 +101,15 @@ table {
 }
 .entete-carte-restaurant__couleur-fleche {
   color: rgb(53, 53, 53);
-  padding-left: 15px;
+  padding-left: 17px;
 }
 .entete-carte-restaurant img {
   width: 197px;
-  padding-left: 50px;
+  margin: 14px 0px 7px 0px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-left: 70px;
 }
 
 footer {
@@ -160,6 +164,10 @@ body {
   max-width: 375px;
   box-sizing: border-box;
   background-color: var(--main-bg-color);
+}
+
+.liens-standard {
+  text-decoration: none;
 }
 
 .espace-bouton {
@@ -311,11 +319,13 @@ body {
   width: 15%;
 }
 
-.restau-palette-gout img {
+.restau-menu img {
   position: relative;
   z-index: 1;
   width: 375px;
   height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu {
@@ -332,39 +342,40 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-family: Shrikhand;
   font-style: italic;
   font-size: 28px;
   font-weight: 400;
-  padding: 25px;
+  gap: 40px;
+  height: 100px;
 }
 
 .choix {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 .choix__titre {
   align-self: flex-start;
   font-size: 16px;
   font-weight: 300;
-  border-bottom: solid 3px rgb(153, 226, 208);
-  padding-bottom: 12px;
-  position: relative;
-  top: 50%;
-  bottom: 0;
-  margin: 20px;
+  margin-left: 15px;
+}
+.choix__soulignement {
+  align-self: flex-start;
+  width: 40px;
+  height: 3px;
+  background-color: rgb(153, 226, 208);
+  margin-left: 15px;
 }
 .choix__plat {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   max-width: 349px;
-  width: 100%;
+  width: 93%;
   height: 69px;
   background-color: #FFFFFF;
-  margin: 0px 0px 35px 0px;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -372,8 +383,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  width: 349px;
   align-items: end;
 }
 .choix__plat__descriptions__partie-gauche {
@@ -382,12 +391,12 @@ body {
   height: 60px;
   width: 300px;
 }
-.choix__plat__descriptions__partie-gauche__partie-gauche_nom {
+.choix__plat__descriptions__partie-gauche__nom {
   padding: 7px;
   font-size: 18px;
   font-weight: 500;
 }
-.choix__plat__descriptions__partie-gauche__partie-gauche_precision {
+.choix__plat__descriptions__partie-gauche__precision {
   padding: 7px;
   font-size: 15px;
   font-weight: 300;
