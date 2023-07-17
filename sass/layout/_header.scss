@@ -42,13 +42,14 @@
     margin-bottom: 5px;
     &__couleur-fleche {
         color: rgba(53, 53, 53, 1);
-        padding-left: 17px;
+        width: 35px;
+        text-align: center;
     }
     img {
-        width: 197px;
-        margin: 14px 0px 7px 0px;
-        height: auto;
+        flex: 1;
+        height: 30px;
+        margin: 14px 35px 7px 0px;
         object-fit: contain;
-        padding-left: 70px;
+
     }
 }

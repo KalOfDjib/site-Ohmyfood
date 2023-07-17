@@ -56,6 +56,83 @@ table {
   border-spacing: 0;
 }
 
+.section {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 500px;
+  line-height: 500px;
+}
+
+.loader {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.loader-quart {
+  border-radius: 300px;
+  border: 6px solid rgba(255, 255, 255, 0.4);
+}
+.loader-quart::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  border: 6px solid transparent;
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+.texte {
+  position: absolute;
+  /*       top: -6px;
+         left: -6px;
+         right: 0;
+         bottom: 0; */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.calque-loader {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  position: fixed;
+  height: 100%;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.9;
+  /*animation: transparence 3s forwards;*/
+}
+
+@keyframes transparence {
+  0% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
 .entete {
   display: flex;
   justify-content: center;
@@ -101,15 +178,15 @@ table {
 }
 .entete-carte-restaurant__couleur-fleche {
   color: rgb(53, 53, 53);
-  padding-left: 17px;
+  width: 35px;
+  text-align: center;
 }
 .entete-carte-restaurant img {
-  width: 197px;
-  margin: 14px 0px 7px 0px;
-  height: auto;
+  flex: 1;
+  height: 30px;
+  margin: 14px 35px 7px 0px;
   -o-object-fit: contain;
      object-fit: contain;
-  padding-left: 70px;
 }
 
 footer {
@@ -283,7 +360,7 @@ body {
   overflow: hidden;
 }
 .restaurant__carte__photo img {
-  max-width: 338px;
+  width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   -o-object-fit: cover;
@@ -337,6 +414,7 @@ body {
   margin-top: -30px;
   position: relative;
   z-index: 2;
+  padding-bottom: 50px;
 }
 .menu__titre {
   display: flex;
