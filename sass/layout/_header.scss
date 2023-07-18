@@ -7,7 +7,7 @@
     .entete__espace-image{
         display: flex;
         justify-content: center;
-        margin-top: 14px;
+        margin-top: 8px;
         margin-bottom: 5px;
         width: 100%;
         height: 63px;
@@ -26,8 +26,8 @@
         align-items: center;
         justify-content: center;
         background-color: var(--grey-bg-color);
+        gap: 17px;
         .entete__espace-localisation-description {
-        padding-left: 15px;
         font-size: 16px;
         font-weight: 500;
         }

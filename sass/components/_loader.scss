@@ -1,57 +1,5 @@
-
-.section {
-    background-color: rgba(0,0,0,0.4);
-    height: 500px;
-    line-height: 500px
-}
-
-.loader {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.loader-quart {
-    border-radius: 300px;
-    border: 6px solid rgba(255,255,255,0.4);
-    &::after {
-        content: "";
-        position: absolute;
-        top: -6px;
-        left: -6px;
-        right: 0;
-        bottom: 0;
-        width: 300px;
-        height: 300px;
-        border-radius: 300px;
-        border: 6px solid transparent;
-        border-top-color: #fff;
-        animation: spin 1s linear infinite;
-    }
-}
-
-.texte {
-    position: absolute;
- /*       top: -6px;
-        left: -6px;
-        right: 0;
-        bottom: 0; */
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
 .calque-loader {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.9);
     display: grid;
     place-items: center;
     text-align: center;
@@ -60,21 +8,73 @@
     inset: 0;
     z-index: 2;
     opacity: 0.9;
-    /*animation: transparence 3s forwards;*/
-}
+    animation: transparence 3s forwards;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    color: black;
 
-@keyframes transparence {
-    0% {opacity: 0.9;
+    &__loader {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+    &__loader-quart {
+        border-radius: 300px;
+        border: 6px solid rgba(255, 255, 255, 0.4);
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 300px;
+            border-radius: 300px;
+            border: 6px solid transparent;
+            border-top-color: #fff;
+            animation: spin 1s linear infinite;
+          }
+    }
+    &__texte {
+        position: absolute;
+        /*       top: -6px;
+               left: -6px;
+               right: 0;
+               bottom: 0; */
+               font-size: 45px;
+               color: #fff;
+               text-align: center;
+               color: white;
+               font-family: 'Times New Roman', Times, serif;
+               font-weight: 500;
+    }
+
+  @keyframes transparence {
+    0% {
+      opacity: 0.9;
     }
     80% {
-        opacity: 0.6;
-    }
-    99% {
-        visibility: visible;
-        opacity: 0;
+      opacity: 0.6;
     }
     100% {
-        visibility:hidden;
+      opacity: 0;
     }
-
-}
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  }
