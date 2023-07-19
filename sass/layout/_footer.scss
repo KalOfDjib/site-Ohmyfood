@@ -1,19 +1,40 @@
-footer {
+.footer {
     background-color: rgba(53, 53, 53, 1);
     color: #FFFFFF;
     height: 186px;
     width: 100%;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width:699px)  {
+        flex-direction: row-reverse;
+        height: 114px;
+
+    }
+
     .logo-footer {
         width: 170px;
         padding: 20px 0px 5px 25px;
         object-fit: cover;
+        @media (min-width:699px)  {
+            width: 139px;
+            object-fit: contain;
+            margin: 0px 0px -50px 35px;
+            padding: 0px;
+        }
     }
 
 
     .footer_liens {
         display: flex;
         flex-direction: column;
+
+        @media (min-width:699px)  {
+            flex-direction: row;
+            align-items: end;
+            margin-bottom: 20px;
+        }
 
         .fa-utensils {
             padding: 5px 10px 5px 25px;

@@ -49,12 +49,18 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: var(--grey-bg-button-color);
+    @media (min-width:699px)  {
+        height: 230px;
+    }
     &__titre {
         width: 70%;
         font-weight: 700;
         font-size: 24px;
         text-align: center;
         margin: 40px 0px 20px 0px;
+        @media (min-width:699px)  {
+            font-size: 40px;
+        }
     }
     &__description {
         width: 85%;
@@ -81,57 +87,79 @@ body {
     }
 }
 
-.fonctionnement {
-    height: 430px;
+.section-fonctionnement{
+    height: 440px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap:25px;
 
-    &__titre {
+    @media (min-width:699px)  {
+        height: 228px;
+    }
+    &__fonctionnement-titre {
         font-weight: 700;
         font-size: 24px;
-        margin: 45px 0px 5px 25px;
+        margin: 45px 0px 35px 5%;
         align-self: flex-start;
+        @media (min-width:699px)  {
+        margin: 45px 0px 0px 13%;
+        }
     }
-    &__etape {
+
+    &__fonctionnement {
+        height: 430px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        max-width: 322px;
-        width: 85%;
-        height: 72px;
-        background-color: var(--grey-bg-button-color);
-        border-radius: 20px;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        gap:25px;
 
-        &__numero {
-            margin-left: -12px;
-            background-color: #9356DC;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            color: #FFFFFF;
-            text-align: center;
-            line-height: 24px;
+        @media (min-width:699px)  {
+            flex-direction: row;
+            align-items: center;
+            gap:3%;
+            width: 72%;
+            height: 150px;
+            margin-left: 14%;
         }
-        &__icone {
-            margin-left: 15px;
-            color: rgba(126, 126, 126, 1);
-            &--color {
-                margin-left: 15px;
-                color: #9356DC;
+
+        &__etape {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-width: 322px;
+            width: 85%;
+            height: 72px;
+            background-color: var(--grey-bg-button-color);
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+            &__numero {
+                margin-left: -12px;
+                background-color: #9356DC;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 24px;
             }
-        }
-        &__texte{
-            margin-left: 15px;
-            font-weight: 500;
-            font-size: 16px;
 
-        }
+            &__icone {
+                margin-left: 15px;
+                color: rgba(126, 126, 126, 1);
+                &--color {
+                    margin-left: 15px;
+                    color: #9356DC;
+                }
+            }
+
+            &__texte{
+                margin-left: 15px;
+                font-weight: 500;
+                font-size: 16px;
+           }
     }
     }
-
+}
 
 .restaurant {
     width: 100%;
@@ -141,6 +169,9 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    @media (min-width:699px)  {
+        height: 730px;
+    }
 
     &__titre {
         font-weight: 700;
@@ -148,55 +179,94 @@ body {
         padding-left: 5%;
         align-self: flex-start;
         margin: 50px 0px 5px 0px;
+        @media (min-width:699px)  {
+            padding-left: 15%;
+            margin: 40px 0px 5px 0px;
+        }
     }
-    &__carte {
+    
+    &__espace-resto { 
         display: flex;
         flex-direction: column;
-        width: 90%;
-        height: 251px;
         align-items: center;
-        text-decoration:none;
-        color: #000000;
+        gap: 20px;
+        height: 552px;
         
-        &__photo {
-            box-sizing: border-box;
-            overflow: hidden;
-            img {
-                width: 100%;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-                object-fit: cover;
-            }
-        }
-        &__descriptions {
-            display: flex;
+        @media (min-width:699px)  {
             flex-direction: row;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 70%;
+            height: 90%;
+            gap: 8%;
+        }
+
+        &__carte {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            height: 251px;
             align-items: center;
-            width: 100%;
-            max-width: 340px;
-            background-color: #FFFFFF;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            height: 70px;
-            .restaurant__carte__descriptions_partie-gauche {
-                display: flex;
-                flex-direction: column;
-                height: 65px;
-                padding: 10px 0px 10px 10px;
-                gap: 5px;
-                justify-content: center;
-                .restaurant__carte__descriptions_partie-gauche_nom {
-                    font-size: 18px;
-                    font-weight: 700;
+            text-decoration:none;
+            color: #000000;
+            @media (min-width:699px)  {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 46%;
+                margin-bottom: 30px;
+            }
+
+            &__photo {
+                box-sizing: border-box;
+                overflow: hidden;
+                @media (min-width:699px)  {
+                    height:190px;                 
                 }
-                .restaurant__carte__descriptions_partie-gauche_lieu {
-                    font-size: 17px;
-                    font-weight: 300;
+                img {
+                    width: 100%;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    object-fit: cover;
+                    max-width: 340px;
+                    @media (min-width:699px)  {
+                        max-width: 490px;
+                        
+                    }
                 }
             }
-            .restaurant__carte__descriptions_partie-droite {
-                width: 15%;
+            &__descriptions {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                max-width: 340px;
+                background-color: #FFFFFF;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                height: 70px;
+                @media (min-width:699px)  {
+                    max-width: 490px;
+                }
+
+                &__partie-gauche {
+                    display: flex;
+                    flex-direction: column;
+                    height: 65px;
+                    padding: 10px 0px 10px 10px;
+                    gap: 5px;
+                    justify-content: center;
+                    &__nom {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                    &__lieu {
+                        font-size: 17px;
+                        font-weight: 300;
+                    }
+                }
+                &__partie-droite {
+                    width: 15%;
+                }
             }
         }
     }
