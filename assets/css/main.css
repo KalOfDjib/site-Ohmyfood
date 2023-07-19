@@ -198,6 +198,7 @@ table {
   .footer {
     flex-direction: row-reverse;
     height: 114px;
+    overflow: hidden;
   }
 }
 .footer .logo-footer {
@@ -524,6 +525,12 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (min-width: 699px) {
+  .restau-menu img {
+    width: 100%;
+    height: 383px;
+  }
+}
 
 .menu {
   width: 100%;
@@ -535,6 +542,16 @@ body {
   position: relative;
   z-index: 2;
   padding-bottom: 50px;
+}
+@media (min-width: 699px) {
+  .menu {
+    width: 74%;
+    margin: -30px 13% 0px 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;
+  }
 }
 .menu .fa-heart {
   padding-right: 15px;
@@ -559,6 +576,11 @@ body {
   gap: 15px;
   margin-bottom: 25px;
 }
+@media (min-width: 699px) {
+  .choix {
+    width: 60%;
+  }
+}
 .choix__titre {
   align-self: flex-start;
   font-size: 16px;
@@ -580,6 +602,11 @@ body {
   background-color: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 699px) {
+  .choix__plat {
+    max-width: 634px;
+  }
 }
 .choix__plat__descriptions {
   display: flex;

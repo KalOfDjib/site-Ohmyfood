@@ -278,6 +278,10 @@ body {
     width: 375px;
     height: 275px;
     object-fit: cover;
+    @media (min-width:699px)  {
+        width: 100%;
+        height: 383px;
+    }
 }
 
 .menu {
@@ -290,6 +294,14 @@ body {
     position: relative;
     z-index: 2;
     padding-bottom: 50px;
+    @media (min-width:699px)  {
+        width: 74%;
+        margin: -30px 13% 0px 13%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0px;
+    }
     
     .fa-heart {
         padding-right: 15px;
@@ -316,6 +328,10 @@ body {
     gap: 15px;
     margin-bottom: 25px;
 
+    @media (min-width:699px)  {
+        width: 60%;
+    }
+
     &__titre {
         align-self: flex-start;
         font-size: 16px;
@@ -339,6 +355,10 @@ body {
         background-color: #FFFFFF;
         border-radius: 20px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+        @media (min-width:699px)  {
+            max-width: 634px;
+        }
 
         &__descriptions {
             display: flex;
