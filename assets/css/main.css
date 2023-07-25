@@ -315,14 +315,35 @@ body {
   width: 218px;
   height: 50px;
   border-radius: 25px;
-  background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   font-weight: 500;
   font-size: 16px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  position: relative;
+  z-index: 1;
   color: #FFFFFF;
   cursor: pointer;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   text-decoration: none;
+}
+.espace-bouton__bouton:hover::after {
+  opacity: 1;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.espace-bouton__bouton::after {
+  content: "";
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#ff93e1, #a16be0);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 .section-fonctionnement {
@@ -437,8 +458,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     width: 70%;
-    height: 90%;
-    gap: 8%;
+    gap: 10px 7%;
   }
 }
 .restaurant__espace-resto__carte {
@@ -513,8 +533,22 @@ body {
   font-size: 17px;
   font-weight: 300;
 }
-.restaurant__espace-resto__carte__descriptions__partie-droite {
-  width: 15%;
+.restaurant__espace-resto__carte__descriptions .animation-coeur {
+  position: relative;
+  width: 30px;
+}
+.restaurant__espace-resto__carte__descriptions .animation-coeur i {
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+}
+.restaurant__espace-resto__carte__descriptions .animation-coeur .fas {
+  opacity: 0;
+}
+.restaurant__espace-resto__carte__descriptions .animation-coeur:hover .fas {
+  opacity: 1;
+}
+.restaurant__espace-resto__carte__descriptions .animation-coeur:hover .far {
+  opacity: 0;
 }
 
 .restau-menu img {
@@ -649,11 +683,33 @@ body {
   width: 186px;
   height: 50px;
   border-radius: 25px;
-  background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   font-weight: 500;
   font-size: 16px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  position: relative;
+  z-index: 1;
   color: #FFFFFF;
   cursor: pointer;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+.espacebouton__bouton-menu:hover::after {
+  opacity: 1;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.7);
+}
+.espacebouton__bouton-menu::after {
+  content: "";
+  width: 186px;
+  height: 50px;
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#ff93e1, #a16be0);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }/*# sourceMappingURL=main.css.map */
