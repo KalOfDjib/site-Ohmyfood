@@ -302,10 +302,15 @@ body {
                     }
                     .fas {
                         opacity: 0;
+                        color: transparent;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        background-image: linear-gradient(#FF79DA, #9356DC);
                     }
                     &:hover {
                         .fas {
                             opacity: 1;
+                            
                         }
                         .far {
                             opacity: 0;
@@ -484,3 +489,31 @@ body {
         }
     }
 }
+
+
+.animation-entree {
+    opacity: 0;
+    animation: apparaitre 2s ease-in-out forwards;
+  }
+  
+  .animation-plat {
+    opacity: 0;
+    animation: apparaitre 2s 2s ease-in-out forwards;
+  }
+  
+  .animation-dessert {
+    opacity: 0;
+    animation: apparaitre 2s 4s ease-in-out forwards;
+  }
+  
+  @keyframes apparaitre {
+    0% {
+      opacity: 0%;
+    }
+    20%{
+        opacity: 60%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }

@@ -543,6 +543,10 @@ body {
 }
 .restaurant__espace-resto__carte__descriptions .animation-coeur .fas {
   opacity: 0;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 .restaurant__espace-resto__carte__descriptions .animation-coeur:hover .fas {
   opacity: 1;
@@ -712,4 +716,31 @@ body {
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
+}
+
+.animation-entree {
+  opacity: 0;
+  animation: apparaitre 2s ease-in-out forwards;
+}
+
+.animation-plat {
+  opacity: 0;
+  animation: apparaitre 2s 2s ease-in-out forwards;
+}
+
+.animation-dessert {
+  opacity: 0;
+  animation: apparaitre 2s 4s ease-in-out forwards;
+}
+
+@keyframes apparaitre {
+  0% {
+    opacity: 0%;
+  }
+  20% {
+    opacity: 60%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
