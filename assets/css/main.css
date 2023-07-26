@@ -536,23 +536,61 @@ body {
 .restaurant__espace-resto__carte__descriptions .animation-coeur {
   position: relative;
   width: 30px;
+  /*                   i {
+                         position: absolute;
+                         transition: opacity 0.5s ease-in-out;
+                     }
+
+                     img {
+                         position: absolute;
+                         opacity: 0;
+                         width: 21px;
+                         top: -9px;
+                     }
+
+
+                     .fas {
+                         opacity: 0;
+                         color: transparent;
+                         background-clip: text;
+                         -webkit-background-clip: text;
+                         background-image: linear-gradient(#FF79DA, #9356DC);
+                     }
+                     */
 }
-.restaurant__espace-resto__carte__descriptions .animation-coeur i {
+.restaurant__espace-resto__carte__descriptions .animation-coeur .coeur-vide {
   position: absolute;
   transition: opacity 0.5s ease-in-out;
+  width: 20px;
+  height: 20px;
 }
-.restaurant__espace-resto__carte__descriptions .animation-coeur .fas {
+.restaurant__espace-resto__carte__descriptions .animation-coeur .coeur-couleur {
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
   opacity: 0;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  width: 20px;
+  height: 20px;
 }
-.restaurant__espace-resto__carte__descriptions .animation-coeur:hover .fas {
+.restaurant__espace-resto__carte__descriptions .animation-coeur:hover {
+  /*
+  .fas {
+      opacity: 1;
+
+  }
+
+
+  img {
+      opacity: 1;
+  }
+  .far {
+      opacity: 0;
+  }*/
+}
+.restaurant__espace-resto__carte__descriptions .animation-coeur:hover .coeur-vide {
+  opacity: 0;
+}
+.restaurant__espace-resto__carte__descriptions .animation-coeur:hover .coeur-couleur {
   opacity: 1;
-}
-.restaurant__espace-resto__carte__descriptions .animation-coeur:hover .far {
-  opacity: 0;
 }
 
 .restau-menu img {
@@ -743,4 +781,10 @@ body {
   100% {
     opacity: 100%;
   }
+}
+.apparition-coche {
+  display: block;
+  background-color: #FF79DA;
+  width: 20%;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */

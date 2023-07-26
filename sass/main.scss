@@ -296,10 +296,33 @@ body {
                 .animation-coeur{
                     position: relative;
                     width: 30px;
-                    i {
+                    .coeur-vide {
+                        position: absolute;
+                        transition: opacity 0.5s ease-in-out;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .coeur-couleur {
+                        position: absolute;
+                        transition: opacity 0.5s ease-in-out;
+                        opacity: 0;
+                        width: 20px;
+                        height: 20px;
+                    }
+ /*                   i {
                         position: absolute;
                         transition: opacity 0.5s ease-in-out;
                     }
+
+                    img {
+                        position: absolute;
+                        opacity: 0;
+                        width: 21px;
+                        top: -9px;
+                    }
+
+
                     .fas {
                         opacity: 0;
                         color: transparent;
@@ -307,14 +330,29 @@ body {
                         -webkit-background-clip: text;
                         background-image: linear-gradient(#FF79DA, #9356DC);
                     }
+                    */
                     &:hover {
+                        /*
                         .fas {
                             opacity: 1;
                             
                         }
+                        
+
+                        img {
+                            opacity: 1;
+                        }
                         .far {
                             opacity: 0;
+                        }*/
+
+                        .coeur-vide {
+                        opacity: 0;
                         }
+                        .coeur-couleur {
+                            opacity: 1;
+                        }
+
                     }
                 }
             }
@@ -516,4 +554,11 @@ body {
     100% {
       opacity: 100%;
     }
+  }
+
+  .apparition-coche {
+    display: block;
+    background-color: #FF79DA;
+    width: 20%;
+    height: 100%;
   }
