@@ -591,7 +591,6 @@ body {
 .menu__titre {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
   font-family: Shrikhand;
   font-style: italic;
@@ -599,6 +598,30 @@ body {
   font-weight: 400;
   gap: 40px;
   height: 100px;
+  padding-top: 30px;
+}
+.menu__titre .animation-coeur {
+  position: relative;
+  width: 30px;
+}
+.menu__titre .animation-coeur .coeur-vide {
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  width: 20px;
+  height: 20px;
+}
+.menu__titre .animation-coeur .coeur-couleur {
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+}
+.menu__titre .animation-coeur:hover .coeur-vide {
+  opacity: 0;
+}
+.menu__titre .animation-coeur:hover .coeur-couleur {
+  opacity: 1;
 }
 
 .choix {
