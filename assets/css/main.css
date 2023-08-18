@@ -97,10 +97,6 @@ table {
 }
 .calque-loader__texte {
   position: absolute;
-  /*       top: -6px;
-         left: -6px;
-         right: 0;
-         bottom: 0; */
   font-size: 45px;
   color: #fff;
   text-align: center;
@@ -157,7 +153,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--grey-bg-color);
+  background-color: #EAEAEA;
   gap: 17px;
 }
 .entete .entete__espace-localisation .entete__espace-localisation-description {
@@ -243,14 +239,6 @@ table {
   text-decoration: none;
 }
 
-:root {
-  --main-color: #0065FC;
-  --main-bg-color: #FFFFFF;
-  --grey-bg-color: #EAEAEA;
-  --main-dot-color: #000000;
-  --grey-bg-button-color: #F6F6F6;
-}
-
 body {
   font-family: roboto, sans-serif;
   display: flex;
@@ -261,7 +249,7 @@ body {
   width: 100%;
   max-width: 375px;
   box-sizing: border-box;
-  background-color: var(--main-bg-color);
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 699px) {
@@ -269,7 +257,7 @@ body {
     width: 100%;
     max-width: 1440px;
     box-sizing: border-box;
-    background-color: var(--main-bg-color);
+    background-color: #FFFFFF;
   }
 }
 .liens-standard {
@@ -282,7 +270,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--grey-bg-button-color);
+  background-color: #F6F6F6;
 }
 @media (min-width: 699px) {
   .espace-bouton {
@@ -391,7 +379,7 @@ body {
   max-width: 322px;
   width: 85%;
   height: 72px;
-  background-color: var(--grey-bg-button-color);
+  background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -422,7 +410,7 @@ body {
 .restaurant {
   width: 100%;
   height: 1200px;
-  background-color: var(--grey-bg-button-color);
+  background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -485,6 +473,7 @@ body {
 @media (min-width: 699px) {
   .restaurant__espace-resto__carte__photo {
     height: 190px;
+    width: 100%;
   }
 }
 .restaurant__espace-resto__carte__photo img {
@@ -498,6 +487,9 @@ body {
 @media (min-width: 699px) {
   .restaurant__espace-resto__carte__photo img {
     max-width: 490px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
   }
 }
 .restaurant__espace-resto__carte__descriptions {
@@ -536,27 +528,6 @@ body {
 .restaurant__espace-resto__carte__descriptions .animation-coeur {
   position: relative;
   width: 30px;
-  /*                   i {
-                         position: absolute;
-                         transition: opacity 0.5s ease-in-out;
-                     }
-
-                     img {
-                         position: absolute;
-                         opacity: 0;
-                         width: 21px;
-                         top: -9px;
-                     }
-
-
-                     .fas {
-                         opacity: 0;
-                         color: transparent;
-                         background-clip: text;
-                         -webkit-background-clip: text;
-                         background-image: linear-gradient(#FF79DA, #9356DC);
-                     }
-                     */
 }
 .restaurant__espace-resto__carte__descriptions .animation-coeur .coeur-vide {
   position: absolute;
@@ -570,21 +541,6 @@ body {
   opacity: 0;
   width: 20px;
   height: 20px;
-}
-.restaurant__espace-resto__carte__descriptions .animation-coeur:hover {
-  /*
-  .fas {
-      opacity: 1;
-
-  }
-
-
-  img {
-      opacity: 1;
-  }
-  .far {
-      opacity: 0;
-  }*/
 }
 .restaurant__espace-resto__carte__descriptions .animation-coeur:hover .coeur-vide {
   opacity: 0;
@@ -678,6 +634,7 @@ body {
   background-color: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 @media (min-width: 699px) {
   .choix__plat {
@@ -690,29 +647,65 @@ body {
   justify-content: space-between;
   align-items: end;
   padding-left: 10px;
-  padding-top: 5px;
+  /* text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;*/
 }
 .choix__plat__descriptions__partie-gauche {
   display: flex;
   flex-direction: column;
   height: 60px;
-  width: 380px;
+  flex: 1 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .choix__plat__descriptions__partie-gauche__nom {
   padding: 7px;
   font-size: 18px;
   font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .choix__plat__descriptions__partie-gauche__precision {
+  display: flex;
+  justify-content: space-between;
   padding: 7px;
   font-size: 15px;
   font-weight: 300;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.choix__plat__descriptions__partie-droite {
+.choix__plat__descriptions__partie-gauche__precision .ingredients {
+  flex-wrap: nowrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.choix__plat__descriptions__partie-gauche__precision .prix {
   width: 15%;
   font-size: 15px;
   font-weight: 700;
-  padding-bottom: 5px;
+  padding-left: 10px;
+}
+.choix__plat__descriptions .apparition-coche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #99E2D0;
+  width: 0px;
+  height: 69px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: width 1s ease-in-out;
+  overflow: hidden;
+}
+.choix__plat__descriptions:hover > .apparition-coche {
+  width: 100px;
+  transition: width 1s ease-in-out;
 }
 
 .espacebouton {
@@ -758,17 +751,17 @@ body {
 
 .animation-entree {
   opacity: 0;
-  animation: apparaitre 2s ease-in-out forwards;
+  animation: apparaitre 1s ease-in-out forwards;
 }
 
 .animation-plat {
   opacity: 0;
-  animation: apparaitre 2s 2s ease-in-out forwards;
+  animation: apparaitre 1s 1s ease-in-out forwards;
 }
 
 .animation-dessert {
   opacity: 0;
-  animation: apparaitre 2s 4s ease-in-out forwards;
+  animation: apparaitre 1s 2s ease-in-out forwards;
 }
 
 @keyframes apparaitre {
@@ -781,10 +774,4 @@ body {
   100% {
     opacity: 100%;
   }
-}
-.apparition-coche {
-  display: block;
-  background-color: #FF79DA;
-  width: 20%;
-  height: 100%;
 }/*# sourceMappingURL=main.css.map */

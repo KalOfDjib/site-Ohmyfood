@@ -45,16 +45,12 @@
     }
     &__texte {
         position: absolute;
-        /*       top: -6px;
-               left: -6px;
-               right: 0;
-               bottom: 0; */
-               font-size: 45px;
-               color: #fff;
-               text-align: center;
-               color: white;
-               font-family: 'Times New Roman', Times, serif;
-               font-weight: 500;
+        font-size: 45px;
+        color: #fff;
+        text-align: center;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 500;
     }
 
   @keyframes transparence {

@@ -4,17 +4,9 @@
 @import 'components/loader';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'utils/functions';
-@import 'utils/mixins';
 @import 'utils/variables';
 
-:root {
-    --main-color: #0065FC;
-    --main-bg-color: #FFFFFF;
-    --grey-bg-color: #EAEAEA;
-    --main-dot-color: #000000;
-    --grey-bg-button-color: #F6F6F6;
-}
+
 
 body {
     font-family: roboto, sans-serif;
@@ -26,7 +18,7 @@ body {
     width: 100%;
     max-width: 375px;
     box-sizing: border-box;
-    background-color: var(--main-bg-color);
+    background-color: $main-bg-color;
 }
 
 @media (min-width:699px)  {
@@ -34,7 +26,7 @@ body {
         width: 100%;
         max-width: 1440px;
         box-sizing: border-box;
-        background-color: var(--main-bg-color);
+        background-color: $main-bg-color;
     }
 }
 
@@ -48,7 +40,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--grey-bg-button-color);
+    background-color: $grey-bg-button-color;
     @media (min-width:699px)  {
         height: 230px;
     }
@@ -79,7 +71,7 @@ body {
         border: none;
         font-weight: 500;
         font-size: 16px;
-        background: linear-gradient(#FF79DA, #9356DC);
+        background: linear-gradient($secondary-color, $primary-color);
         position: relative;
         z-index: 1;
         color: #FFFFFF;
@@ -106,13 +98,13 @@ body {
             bottom: 0;
             left: 0;
              background: linear-gradient(
-              lighten(#FF79DA, 5%),
-              lighten(#9356DC, 5%)
+              lighten($secondary-color, 5%),
+              lighten($primary-color, 5%)
             );
               opacity: 0;
               z-index: -1;
               transition: opacity 250ms;
-          }
+        }
     }
 }
 
@@ -157,13 +149,13 @@ body {
             max-width: 322px;
             width: 85%;
             height: 72px;
-            background-color: var(--grey-bg-button-color);
+            background-color: $grey-bg-button-color;
             border-radius: 20px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
             &__numero {
                 margin-left: -12px;
-                background-color: #9356DC;
+                background-color: $primary-color;
                 width: 24px;
                 height: 24px;
                 border-radius: 50%;
@@ -177,7 +169,7 @@ body {
                 color: rgba(126, 126, 126, 1);
                 &--color {
                     margin-left: 15px;
-                    color: #9356DC;
+                    color: $primary-color;
                 }
             }
 
@@ -193,7 +185,7 @@ body {
 .restaurant {
     width: 100%;
     height: 1200px;
-    background-color: var(--grey-bg-button-color);
+    background-color: $grey-bg-button-color;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -247,7 +239,8 @@ body {
                 box-sizing: border-box;
                 overflow: hidden;
                 @media (min-width:699px)  {
-                    height:190px;                 
+                    height:190px;
+                    width: 100%;                 
                 }
                 img {
                     width: 100%;
@@ -257,7 +250,8 @@ body {
                     max-width: 340px;
                     @media (min-width:699px)  {
                         max-width: 490px;
-                        
+                        object-fit: cover;
+                        height: 100%;
                     }
                 }
             }
@@ -310,50 +304,16 @@ body {
                         width: 20px;
                         height: 20px;
                     }
- /*                   i {
-                        position: absolute;
-                        transition: opacity 0.5s ease-in-out;
-                    }
 
-                    img {
-                        position: absolute;
-                        opacity: 0;
-                        width: 21px;
-                        top: -9px;
-                    }
-
-
-                    .fas {
-                        opacity: 0;
-                        color: transparent;
-                        background-clip: text;
-                        -webkit-background-clip: text;
-                        background-image: linear-gradient(#FF79DA, #9356DC);
-                    }
-                    */
                     &:hover {
-                        /*
-                        .fas {
-                            opacity: 1;
-                            
-                        }
-                        
-
-                        img {
-                            opacity: 1;
-                        }
-                        .far {
-                            opacity: 0;
-                        }*/
-
                         .coeur-vide {
                         opacity: 0;
                         }
                         .coeur-couleur {
-                            opacity: 1;
+                        opacity: 1;
                         }
-
                     }
+
                 }
             }
         }
@@ -443,6 +403,7 @@ body {
         background-color: #FFFFFF;
         border-radius: 20px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
 
         @media (min-width:699px)  {
             max-width: 634px;
@@ -454,28 +415,72 @@ body {
             justify-content: space-between;
             align-items: end;
             padding-left: 10px;
-            padding-top: 5px;
+           /* text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;*/
+
+
+
             &__partie-gauche {
                 display: flex;
                 flex-direction: column;
                 height: 60px;
-                width: 380px;
+                flex: 1 1;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
                 &__nom {
                     padding: 7px;
                     font-size: 18px;
                     font-weight: 500;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
                 &__precision {
+                    display: flex;
+                    justify-content: space-between;
                     padding: 7px;
                     font-size: 15px;
                     font-weight: 300;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+
+                    .ingredients {
+                        flex-wrap: nowrap;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+
+                    }
+
+                    .prix {
+                        width: 15%;
+                        font-size: 15px;
+                        font-weight: 700;
+                        padding-left: 10px;
+                    }
                 }
             }
-            &__partie-droite {
-                width: 15%;
-                font-size: 15px;
-                font-weight: 700;
-                padding-bottom: 5px;
+            .apparition-coche {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                background-color: $third-color;
+                width: 0px;
+                height: 69px;
+                border-bottom-right-radius: 15px;
+                border-top-right-radius: 15px;
+                transition: width 1s ease-in-out;
+                overflow: hidden;
+            }
+            &:hover {
+                & > .apparition-coche {
+                    width: 100px;
+                    transition: width 1s ease-in-out;
+                }
             }
         }
     }    
@@ -494,7 +499,7 @@ body {
         border: none;
         font-weight: 500;
         font-size: 16px;
-        background: linear-gradient(#FF79DA, #9356DC);
+        background: linear-gradient($secondary-color, $primary-color);
         position: relative;
         z-index: 1;
         color: #FFFFFF;
@@ -519,8 +524,8 @@ body {
             bottom: 0;
             left: 0;
             background: linear-gradient(
-            lighten(#FF79DA, 5%),
-            lighten(#9356DC, 5%));
+            lighten($secondary-color, 5%),
+            lighten($primary-color, 5%));
             opacity: 0;
             z-index: -1;
             transition: opacity 250ms;
@@ -531,17 +536,17 @@ body {
 
 .animation-entree {
     opacity: 0;
-    animation: apparaitre 2s ease-in-out forwards;
+    animation: apparaitre 1s ease-in-out forwards;
   }
   
   .animation-plat {
     opacity: 0;
-    animation: apparaitre 2s 2s ease-in-out forwards;
+    animation: apparaitre 1s 1s ease-in-out forwards;
   }
   
   .animation-dessert {
     opacity: 0;
-    animation: apparaitre 2s 4s ease-in-out forwards;
+    animation: apparaitre 1s 2s ease-in-out forwards;
   }
   
   @keyframes apparaitre {
@@ -556,9 +561,5 @@ body {
     }
   }
 
-  .apparition-coche {
-    display: block;
-    background-color: #FF79DA;
-    width: 20%;
-    height: 100%;
-  }
+
+
