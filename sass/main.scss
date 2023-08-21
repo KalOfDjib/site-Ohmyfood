@@ -9,7 +9,7 @@
 
 
 body {
-    font-family: roboto, sans-serif;
+    font-family: $defaut-font;
     display: flex;
     justify-content: center;
 }
@@ -42,14 +42,14 @@ body {
     align-items: center;
     background-color: $grey-bg-button-color;
     @media (min-width:699px)  {
-        height: 230px;
+        height: 240px;
     }
     &__titre {
         width: 70%;
         font-weight: 700;
         font-size: 24px;
         text-align: center;
-        margin: 40px 0px 20px 0px;
+        margin: 40px 0px 30px 0px;
         @media (min-width:699px)  {
             font-size: 40px;
         }
@@ -146,7 +146,7 @@ body {
             display: flex;
             flex-direction: row;
             align-items: center;
-            max-width: 322px;
+            max-width: 335px;
             width: 85%;
             height: 72px;
             background-color: $grey-bg-button-color;
@@ -184,14 +184,14 @@ body {
 
 .restaurant {
     width: 100%;
-    height: 1200px;
+    height: 1225px;
     background-color: $grey-bg-button-color;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     @media (min-width:699px)  {
-        height: 730px;
+        height: 670px;
     }
 
     &__titre {
@@ -201,7 +201,7 @@ body {
         align-self: flex-start;
         margin: 50px 0px 5px 0px;
         @media (min-width:699px)  {
-            padding-left: 15%;
+            padding-left: 13%;
             margin: 40px 0px 5px 0px;
         }
     }
@@ -216,14 +216,14 @@ body {
         @media (min-width:699px)  {
             flex-direction: row;
             flex-wrap: wrap;
-            width: 70%;
+            width: 74%;
             gap: 10px 7%;
         }
 
         &__carte {
             display: flex;
             flex-direction: column;
-            width: 90%;
+            width: 100%;
             height: 251px;
             align-items: center;
             text-decoration:none;
@@ -274,7 +274,7 @@ body {
                     display: flex;
                     flex-direction: column;
                     height: 65px;
-                    padding: 10px 0px 10px 10px;
+                    padding: 10px 0px 10px 13px;
                     gap: 5px;
                     justify-content: center;
                     &__nom {
@@ -290,19 +290,21 @@ body {
                 .animation-coeur{
                     position: relative;
                     width: 30px;
+                    margin-right: 15px;
+                    margin-bottom: 30px;
                     .coeur-vide {
                         position: absolute;
                         transition: opacity 0.5s ease-in-out;
-                        width: 20px;
-                        height: 20px;
+                        width: 22px;
+                        height: 21px;
                     }
 
                     .coeur-couleur {
                         position: absolute;
                         transition: opacity 0.5s ease-in-out;
                         opacity: 0;
-                        width: 20px;
-                        height: 20px;
+                        width: 22px;
+                        height: 21px;
                     }
 
                     &:hover {
@@ -348,7 +350,6 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 0px;
     }
     
     .fa-heart {
@@ -375,16 +376,16 @@ body {
             .coeur-vide {
                 position: absolute;
                 transition: opacity 0.5s ease-in-out;
-                width: 20px;
-                height: 20px;
+                width: 25px;
+                height: 25px;
             }
     
             .coeur-couleur {
                 position: absolute;
                 transition: opacity 0.5s ease-in-out;
                 opacity: 0;
-                width: 20px;
-                height: 20px;
+                width: 25px;
+                height: 25px;
             }
     
             &:hover {
@@ -405,7 +406,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 
     @media (min-width:699px)  {
         width: 60%;
@@ -446,11 +447,6 @@ body {
             justify-content: space-between;
             align-items: end;
             padding-left: 10px;
-           /* text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;*/
-
-
 
             &__partie-gauche {
                 display: flex;
@@ -471,7 +467,7 @@ body {
                 &__precision {
                     display: flex;
                     justify-content: space-between;
-                    padding: 7px;
+                    padding: 0px 0px 7px 7px;
                     font-size: 15px;
                     font-weight: 300;
                     text-overflow: ellipsis;
@@ -509,7 +505,7 @@ body {
             }
             &:hover {
                 & > .apparition-coche {
-                    width: 100px;
+                    width: 59px;
                     transition: width 1s ease-in-out;
                 }
             }
@@ -521,7 +517,7 @@ body {
 .espacebouton {
     display: flex;
     flex-direction: column;
-    margin: 50px 0px 50px 0px;
+    margin: 50px 0px 0px 0px;
     align-items: center;
     &__bouton-menu {
         width: 186px;

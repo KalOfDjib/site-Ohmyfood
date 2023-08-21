@@ -4,18 +4,25 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+
     .entete__espace-image{
         display: flex;
         justify-content: center;
-        margin-top: 8px;
-        margin-bottom: 5px;
         width: 100%;
         height: 63px;
+        @media (min-width:699px)  {
+            height: 96px;
+        }
         img {
-            width: 197px;
-            margin: 14px 0px 7px 0px;
+            width: 162px;
+            margin-top: 14px;
             height: auto;
             object-fit: contain;
+            @media (min-width:699px)  {
+                width: 200px;
+                height: 34px;
+                margin-top: 30px;
+            }
         }
 
     }
@@ -41,14 +48,15 @@
     height: 63px;
     &__couleur-fleche {
         color: rgba(53, 53, 53, 1);
-        width: 35px;
+        width: 30px;
         text-align: center;
         padding-left: 10px;
     }
     img {
         flex: 1;
         height: 30px;
-        margin: 14px 35px 7px 67px;
+        padding-right: 10px;
+        padding-top: 14px;
         object-fit: contain;
 
     }
